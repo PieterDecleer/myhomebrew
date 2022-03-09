@@ -1,0 +1,148 @@
+{
+	"name": "Frost Giant Shield SKT",
+	"size": "H",
+	"type": "giant",
+	"source": "FrostGiant2",
+	"alignment": [
+		"N",
+		"E"
+	],
+	"ac": [
+		{
+			"ac": 15,
+			"from": [
+				"patchwork armor"
+			]
+		}
+	],
+	"hp": {
+		"formula": "12d12 + 60",
+		"average": 138
+	},
+	"speed": {
+		"walk": 40
+	},
+	"str": 23,
+	"dex": 9,
+	"con": 21,
+	"int": 9,
+	"wis": 10,
+	"cha": 12,
+	"passive": 13,
+	"cr": "8",
+	"shortName": "Frost Giant",
+	"languages": [
+		"Giant"
+	],
+	"languageTags": [
+		"GI"
+	],
+	"save": {
+		"con": "+8",
+		"wis": "+3",
+		"cha": "+4"
+	},
+	"skill": {
+		"athletics": "+9",
+		"perception": "+3"
+	},
+	"immune": [
+		"cold"
+	],
+	"action": [
+		{
+			"name": "Multiattack",
+			"entries": [
+				"The giant makes two greataxe attacks."
+			]
+		},
+		{
+			"name": "Greataxe",
+			"entries": [
+				"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}31 ({@damage 3d12 + 12}) slashing damage."
+			]
+		},
+		{
+			"name": "Rock",
+			"entries": [
+				"{@atk rw} {@hit 9} to hit, range 60/240 ft., one target. {@h}27 ({@damage 4d10 + 6}) bludgeoning damage."
+			]
+		},
+		{
+			"name": "Snatch.",
+			"entries": [
+				"The giant tries to grab a Small or Medium creature within 10 feet of it and hold it in its hand. The target must succeed on a Strength or Dexterity saving throw, being {@condition grappled} and {@condition restrained} by the giant. A giant can snatch one Small or Medium creature in each of its hands. If a giant starts its turn with one or more snatched creatures in hand, it can use a bonus action to use smash, chew, rip, or crush against one of those creatures."
+			]
+		},
+		{
+			"name": "Squash",
+			"entries": [
+				"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}33 ({@damage 6d6 + 12}) bludgeoning damage. The giant lands {@condition prone} in the target's space, and the target is {@condition grappled} (escape {@dc 17}). Until this grapple ends, the target is {@condition prone}. The grapple ends early if the giant stands up."
+			]
+		},
+		{
+			"name": "Weighted Nets",
+			"entries": [
+				"{@atk rw} {@hit 2} to hit, range 20/60 ft., one small, medium or large target. {@h} The target is {@condition restrained} until it escapes the net. Any creature can use its action to make a {@dc 17} Strength check to free itself or another creature in the net, ending the effect on a success. Dealing 15 slashing damage to the net (AC 12) destroys the net and frees the target."
+			]
+		},
+		{
+			"name": "Fling.",
+			"entries": [
+				"The giant tries to throw a Small or Medium creature within 10 feet of it. The target must succeed on a {@dc 17} Dexterity saving throw or be hurled up to 60 feet horizontally in a direction of the giant's choice and land {@condition prone}, taking {@damage 1d8} bludgeoning damage for every 10 feet it was thrown."
+			]
+		}
+	],
+	"damageTags": [
+		"S",
+		"B"
+	],
+	"miscTags": [
+		"MW",
+		"RCH",
+		"RW"
+	],
+	"conditionInflict": [
+		"frightened",
+		"grappled",
+		"prone",
+		"restrained"
+	],
+	"actionTags": [
+		"Multiattack"
+	],
+	"trait": [
+		{
+			"name": "Tackle.",
+			"entries": [
+				"When the giant enters any enemy's space for the first time on a turn, the enemy must succeed on a {@dc 17} Strength saving throw or be knocked {@condition prone}."
+			]
+		}
+	],
+	"bonus": [
+		{
+			"name": "Smash",
+			"entries": [
+				"The giant smashes a snatched creature into the ground for {@damage 4d6 + 6}  bludgeoning damage. The creature is no longer snatched."
+			]
+		},
+		{
+			"name": "Chew",
+			"entries": [
+				"The giant bites a snatched creature in half, dealing {@damage 6d8 + 6} piercing damage. If this reduces the target to 0 hit points, the target is killed, and half of the target is swallowed or spat out by the giant. The creature is no longer snatched."
+			]
+		},
+		{
+			"name": "Rip",
+			"entries": [
+				"The giant uses two hands to rip a snatched creature apart, dealing {@damage 6d10 + 6} slashing damage. If this reduces the target to 0 hit points, the target is killed, and creatures within 50' of the giant that are hostile to it must make a {@dc 17} Wisdom saving throw or be {@condition frightened} of the giant until the start of the giant's next turn. The creature is no longer snatched."
+			]
+		},
+		{
+			"name": "Crush",
+			"entries": [
+				"The giant squeezes a snatched creature dealing {@damage 4d6 + 6} bludgeoning damage to the creature, the creature remains snatched."
+			]
+		}
+	]
+}
