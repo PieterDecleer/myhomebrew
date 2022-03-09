@@ -1,8 +1,8 @@
 {
-	"name": "Frost Giant Shield SKT",
+	"name": "Frost Giant Shield",
 	"size": "H",
 	"type": "giant",
-	"source": "FrostGiant2",
+	"source": "MyHomebrew SKT",
 	"alignment": [
 		"N",
 		"E"
